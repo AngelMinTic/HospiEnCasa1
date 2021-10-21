@@ -1,0 +1,70 @@
+﻿@page
+@model HospiEnCasa.App.FrontEnd.Pages.PacienteEditModel
+@{
+}
+<h2>Edición del Paciente :@Model.Paciente.Nombre @Model.Paciente.Apellidos </h2>
+<form method="post">
+    <input type="hidden" asp-for="Paciente.Id"/>
+    <div class="form-group">
+        <label asp-for="Paciente.Nombre"></label>
+        <input asp-for="Paciente.Nombre" class="form-control">
+        <span class="text-danger" asp-validation-for="Paciente.Nombre"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Paciente.Apellidos"></label>
+        <input asp-for="Paciente.Apellidos" class="form-control">
+        <span class="text-danger" asp-validation-for="Paciente.Apellidos"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Paciente.Direccion"></label>
+        <input asp-for="Paciente.Direccion" class="form-control">
+        <span class="text-danger" asp-validation-for="Paciente.Direccion"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Paciente.Ciudad"></label>
+        <input asp-for="Paciente.Ciudad" class="form-control">
+        <span class="text-danger" asp-validation-for="Paciente.Ciudad"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Paciente.NumeroTelefono"></label>
+        <input asp-for="Paciente.NumeroTelefono" class="form-control">
+        <span class="text-danger" asp-validation-for="Paciente.NumeroTelefono"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Paciente.Latitud"></label>
+        <input asp-for="Paciente.Latitud" class="form-control">
+        <span class="text-danger" asp-validation-for="Paciente.Latitud"></span>
+    </div>
+        <div class="form-group">
+        <label asp-for="Paciente.Longitud"></label>
+        <input asp-for="Paciente.Longitud" class="form-control">
+        <span class="text-danger" asp-validation-for="Paciente.Longitud"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Paciente.FechaNacimiento"></label>
+        <input asp-for="Paciente.FechaNacimiento" class="form-control">
+        <span class="text-danger" asp-validation-for="Paciente.FechaNacimiento"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Paciente.Familiar"></label>
+        <input asp-for="Paciente.Familiar" class="form-control">
+        <span class="text-danger" asp-validation-for="Paciente.Familiar"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Paciente.Enfermera"></label>
+        <input asp-for="Paciente.Enfermera" class="form-control">
+        <span class="text-danger" asp-validation-for="Paciente.Enfermera"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Paciente.Medico"></label>
+        <input asp-for="Paciente.Medico" class="form-control">
+        <span class="text-danger" asp-validation-for="Paciente.Medico"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Paciente.Historia"></label>
+        <input asp-for="Paciente.Historia" class="form-control">
+        <span class="text-danger" asp-validation-for="Paciente.Historia"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Grabar</button>
+</form>
+<a asp-page="./PacientesList" class="btn btn-primary">Lista de Pacientes </a>

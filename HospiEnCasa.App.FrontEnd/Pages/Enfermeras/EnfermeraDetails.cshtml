@@ -1,0 +1,18 @@
+﻿@page
+@model HospiEnCasa.App.FrontEnd.Pages.EnfermeraDetailsModel
+@{
+}
+<h2>@Model.Enfermera.Nombre @Model.Enfermera.Apellidos</h2>
+<div>
+    Telefono: @Model.Enfermera.NumeroTelefono
+</div>
+<div>
+    Genero: @Model.Enfermera.Genero
+</div>
+<div>
+    Tarjeta Profesional: @Model.Enfermera.TarjetaProfesional
+</div>
+<div>
+    Horas Laborales: @Model.Enfermera.HorasLaborales
+</div>
+<a asp-page="./EnfermerasList" class="btn btn-primary">Lista de Enfermeras </a>

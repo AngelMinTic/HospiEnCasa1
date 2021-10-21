@@ -1,0 +1,19 @@
+﻿@page
+@model HospiEnCasa.App.FrontEnd.Pages.FamiliarDesignadoDetailsModel
+@{
+}
+<h2>@Model.FamiliarDesignado.Nombre @Model.FamiliarDesignado.Apellidos</h2>
+<div>
+    Telefono: @Model.FamiliarDesignado.NumeroTelefono
+</div>
+<div>
+    Genero: @Model.FamiliarDesignado.Genero
+</div>
+<div>
+    Parentesco: @Model.FamiliarDesignado.Parentesco
+</div>
+<div>
+    Correo: @Model.FamiliarDesignado.Correo
+</div>
+
+<a asp-page="./FamiliaresDesignadosList" class="btn btn-primary">Lista de Familiares </a>

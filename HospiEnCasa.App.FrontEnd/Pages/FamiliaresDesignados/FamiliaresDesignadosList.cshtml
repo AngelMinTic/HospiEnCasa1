@@ -1,0 +1,39 @@
+﻿@page
+@model HospiEnCasa.App.FrontEnd.Pages.FamiliaresDesignadosListModel
+@{
+}
+<h1>Listado de Familiares</h1>
+
+<form method="get">
+    <div class="form-group">
+        <p>
+            Saludo: <input type="text" name="filtroBusqueda" asp-for="FiltroBusqueda" />
+            <input type="submit" value="Filtrar" />
+        </p>
+    </div>
+</form>
+
+<table class="table">
+    @foreach (var familiarDesignado in Model.Familiares)
+    {
+        <tr>
+            <td>@familiarDesignado.Nombre</td>
+            <td>@familiarDesignado.Apellidos</td>
+            <td>@familiarDesignado.NumeroTelefono</td>
+            <td>@familiarDesignado.Genero</td>
+            <td>@familiarDesignado.Parentesco</td>
+            <td>@familiarDesignado.Correo</td>
+            <td><a class="btn btn-primary table-btn" asp-page="./FamiliarDesignadoDetails" asp-route-familiarDesignadoId="@familiarDesignado.Id">
+                    <i class="fas fa-info-circle fa lg"></i>
+                </a></td>
+            <td><a class="btn btn-warning table-btn" asp-page="./FamiliarDesignadoEdit" asp-route-familiarDesignadoId="@familiarDesignado.Id">
+                    <i class="fas fa-address-book fa-lg" aria-hidden="true"></i>
+                </a></td>
+            <td><a class="btn btn-danger table-btn" asp-page="./FamiliarDesignadoDelete" asp-route-familiarDesignadoId="@familiarDesignado.Id">
+                    <i class="fas fa-trash-alt fa-lg" aria-hidden="true"></i>
+                </a></td>
+        </tr>
+    }
+</table>
+
+<a asp-page=".\FamiliarDesignadoEdit" class="btn btn-primary">Adicionar FamiliarDesignado</a>

@@ -1,0 +1,21 @@
+﻿@page
+@model HospiEnCasa.App.FrontEnd.Pages.MedicoDetailsModel
+@{
+}
+<h2>@Model.Medico.Nombre @Model.Medico.Apellidos</h2>
+<div>
+    Telefono: @Model.Medico.NumeroTelefono
+</div>
+<div>
+    Genero: @Model.Medico.Genero
+</div>
+<div>
+    Enfermera: @Model.Medico.Especialidad
+</div>
+<div>
+    Codigo: @Model.Medico.Codigo
+</div>
+<div>
+    Historia: @Model.Medico.RegistroRethus
+</div>
+<a asp-page="./MedicosList" class="btn btn-primary">Lista de Medicos </a>

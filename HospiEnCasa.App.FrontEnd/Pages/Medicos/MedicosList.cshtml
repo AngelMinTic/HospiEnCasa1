@@ -1,0 +1,39 @@
+﻿@page
+@model HospiEnCasa.App.FrontEnd.Pages.MedicosListModel
+@{
+}
+<h1>Listado de Medicos</h1>
+
+<form method="get">
+    <div class="form-group">
+        <p>
+            Saludo: <input type="text" name="filtroBusqueda" asp-for="FiltroBusqueda" />
+            <input type="submit" value="Filtrar" />
+        </p>
+</form>
+
+<table class="table">
+    @foreach (var medico in Model.Medicos)
+    {
+        <tr>
+            <td>@medico.Nombre</td>
+            <td>@medico.Apellidos</td>
+            <td>@medico.NumeroTelefono</td>
+            <td>@medico.Genero</td>
+            <td>@medico.Especialidad</td>
+            <td>@medico.Codigo</td>
+            <td>@medico.RegistroRethus</td>
+            <td><a class="btn btn-primary table-btn" asp-page="./MedicoDetails" asp-route-medicoId="@medico.Id">
+                    <i class="fas fa-info-circle fa lg"></i>
+                </a></td>
+            <td><a class="btn btn-warning table-btn" asp-page="./MedicoEdit" asp-route-medicoId="@medico.Id">
+                    <i class="fas fa-address-book fa-lg" aria-hidden="true"></i>
+                </a></td>
+            <td><a class="btn btn-danger table-btn" asp-page="./MedicoDelete" asp-route-medicoId="@medico.Id">
+                    <i class="fas fa-trash-alt fa-lg" aria-hidden="true"></i>
+                </a></td>
+        </tr>
+    }
+</table>
+
+<a asp-page=".\MedicoEdit" class="btn btn-primary">Adicionar Medico</a>

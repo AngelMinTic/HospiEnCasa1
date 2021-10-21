@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Ejn2LxYk/tlRdqOxrVc69ywH+vXk4H6ITpPaFWWx5Ttc8FwaF+YVrqgLVCxZm/VUxjaOtkP4Zr8Fuoz5i5IFFA==",
+  "success": true,
+  "projectFilePath": "C:\\Hospitalizacion\\HospiEnCasa.App\\HospiEnCasa.App.Dominio\\HospiEnCasa.App.Dominio.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\arajp\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
